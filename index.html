@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>赤赤 Chelsy · 从电影宣发到 AI 应用开发</title>
+    <meta name="description" content="赤赤（Chelsy），前电影宣发策划剪辑，参与过 20+ 部院线电影项目；现在在做一款情感陪伴类原生 Android 应用。" />
+    <meta name="author" content="赤赤 Chelsy" />
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content="赤赤 Chelsy · 从电影宣发到 AI 应用开发" />
+    <meta property="og:description" content="做过 20+ 部院线电影的宣发，现在在做一款情感陪伴类原生 Android 应用。" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "赤赤",
+      "alternateName": "Chelsy",
+      "jobTitle": "Android 应用开发者 / 前电影宣发策划剪辑",
+      "email": "mailto:chelsy2017ss@gmail.com",
+      "knowsAbout": ["Android 应用开发", "电影宣发", "短视频剪辑", "文案策划"],
+      "knowsLanguage": ["zh", "yue", "en"]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+      html, body { overflow-x: hidden; }
+      .w-80.translate-x-full { visibility: hidden; }
+      body { margin: 0; padding: 0; background: #000; font-family: 'Inter', sans-serif; }
+      ::-webkit-scrollbar { display: none; }
+      .custom-scrollbar::-webkit-scrollbar { display: block; width: 4px; }
+      .custom-scrollbar::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.05); }
+      .custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.2); border-radius: 4px; }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.4); }
+
+      #site { position: relative; z-index: 5; color: #e8ecf1; font-family: Georgia, 'Songti SC', serif; }
+      #site section { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+      .hero { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; }
+      .glow { position: absolute; width: 640px; height: 640px; max-width: 120vw; border-radius: 50%; top: 50%; left: 50%;
+        background: radial-gradient(circle, rgba(74,111,165,.45) 0%, rgba(74,111,165,.15) 45%, transparent 75%);
+        transform: translate(-50%,-50%); filter: blur(40px); animation: breathe 6s ease-in-out infinite; pointer-events: none; z-index: -1; }
+      @keyframes breathe { 0%,100% { opacity:.35; transform:translate(-50%,-50%) scale(1);} 50% { opacity:.75; transform:translate(-50%,-50%) scale(1.15);} }
+      @keyframes fadeUp { from { opacity:0; transform:translateY(10px);} to { opacity:1; transform:none;} }
+      .upload-hint { position: absolute; bottom: 72px; margin: 0; padding: 0 24px; font-family: 'Inter', sans-serif;
+        font-size: .72rem; letter-spacing: .12em; color: rgba(255,255,255,.4); transition: color .3s; animation: fadeUp 3s ease-in; }
+      .hero h1 { font-size: clamp(2rem, 6vw, 2.8rem); font-weight: 300; letter-spacing: .3em; margin: 0 0 1.2rem; animation: fadeUp 2s ease-in; }
+      .hero h1 small { display:block; font-size: .9rem; letter-spacing: .4em; color: rgba(160,185,215,.7); margin-top: .6rem; }
+      .divider { width: 140px; height: 1px; margin: 0 auto 1.4rem; background: linear-gradient(90deg, transparent, rgba(130,170,220,.6), transparent); }
+      .tagline { font-size: 1rem; letter-spacing: .12em; color: rgba(190,205,225,.9); line-height: 2; animation: fadeUp 3s ease-in; }
+      .scroll-hint { position: absolute; bottom: 32px; font-size: .7rem; letter-spacing: .3em; color: rgba(255,255,255,.35); }
+      .block { padding: 56px 24px !important; }
+      .block h2 { font-size: .75rem; letter-spacing: .4em; text-transform: uppercase; color: rgba(160,185,215,.75); font-family: 'Inter', sans-serif; font-weight: 500; margin: 0 0 20px; }
+      .card { background: rgba(10,14,22,.55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+        border: 1px solid rgba(255,255,255,.08); border-radius: 18px; padding: 28px; line-height: 1.95; color: rgba(225,232,240,.88); }
+      .card + .card { margin-top: 16px; }
+      .card h3 { margin: 0 0 6px; font-size: 1.2rem; font-weight: 400; color: #fff; letter-spacing: .05em; }
+      .meta { font-family: 'Inter', sans-serif; font-size: .75rem; color: rgba(160,185,215,.7); letter-spacing: .08em; margin-bottom: 12px; }
+      .card ul { margin: 0; padding-left: 1.1em; list-style: disc; }
+      .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+      .tags span { font-family: 'Inter', sans-serif; font-size: .72rem; padding: 4px 10px; border-radius: 999px; border: 1px solid rgba(130,170,220,.3); color: rgba(190,210,235,.9); }
+      .card a { color: #9cc3f0; text-decoration: none; border-bottom: 1px solid rgba(156,195,240,.35); }
+      .posters { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 20px; }
+      .posters figure { margin: 0; }
+      .posters img { width: 100%; aspect-ratio: 2 / 3; object-fit: cover; border-radius: 10px; display: block;
+        border: 1px solid rgba(255,255,255,.08); filter: grayscale(.6) brightness(.7);
+        transition: filter .5s ease, transform .5s ease; }
+      .posters figure:hover img, .posters figure:active img { filter: none; transform: scale(1.03); }
+      .posters figcaption { font-family: 'Inter', sans-serif; font-size: .72rem; text-align: center; margin-top: 8px; color: rgba(190,205,225,.75); }
+      .poster-note { margin: 14px 0 0; font-size: .85rem; color: rgba(190,205,225,.7); }
+      .edu { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.08); font-family: 'Inter', sans-serif; font-size: .8rem; letter-spacing: .08em; color: rgba(160,185,215,.8); }
+      @media (max-width: 560px) { .posters { grid-template-columns: repeat(2, 1fr); } }
+      .showcase { margin-top: 16px;
+        background: rgba(10,14,22,.55); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+        border-radius: 18px; padding: 26px 28px 22px; border: 1px solid rgba(255,255,255,.08); }
+      .sc-top { display: flex; gap: 10px; font-family: 'Inter', sans-serif; font-size: .68rem; letter-spacing: .32em; color: rgba(190,205,225,.8); margin-bottom: 22px; }
+      .sc-top span + span { color: rgba(160,185,215,.5); }
+      .phones { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 4px 6px 18px; align-items: start; }
+      .phone { border: 4px solid #1c1718; border-radius: 18px; overflow: hidden;
+        background: #1c1718; box-shadow: 0 10px 22px rgba(0,0,0,.35), 0 0 0 1px rgba(255,255,255,.08); }
+      .phone:nth-child(even) { margin-top: 18px; }
+      .phone img { width: 100%; aspect-ratio: 1080 / 2400; object-fit: cover; display: block; border-radius: 14px; }
+      .sc-bottom { position: relative; text-align: center; margin-top: 18px; }
+      .sc-logo { font-family: Georgia, serif; font-style: italic; font-size: 1.6rem; color: rgba(232,236,241,.85); letter-spacing: .02em; }
+      .sc-side { position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-family: 'Inter', sans-serif; font-size: .62rem; letter-spacing: .3em; color: rgba(160,185,215,.55); }
+      @media (max-width: 760px) {
+        .showcase { padding: 20px 16px 18px; }
+        .phones { gap: 8px; padding: 2px 0 10px; }
+        .phone { border-width: 2px; border-radius: 10px; }
+        .phone:nth-child(even) { margin-top: 10px; }
+        .phone img { border-radius: 8px; }
+        .sc-side { display: none; }
+      }
+      footer { text-align: center; padding: 40px 0 64px; font-family: 'Inter', sans-serif; font-size: .7rem; letter-spacing: .25em; color: rgba(255,255,255,.3); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "three": "https://esm.sh/three@^0.182.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@^9.5.0",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@^10.7.7",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="./assets/index-CInsFTmK.js?v=5"></script>
+</head>
+  <body>
+    <div id="root"></div>
+    <main id="site">
+      <section class="hero">
+        <div class="glow"></div>
+        <h1>赤赤<small>CHELSY</small></h1>
+        <div class="divider"></div>
+        <p class="tagline">做过 20+ 部院线电影的宣发<br>现在用 AI，写一个属于自己的应用</p>
+        <p class="upload-hint">点右上角的按钮可以调整雨幕，也可以换上你自己的图片</p>
+        <div class="scroll-hint">SCROLL ↓</div>
+      </section>
+
+      <section class="block">
+        <h2>About</h2>
+        <div class="card">
+          过去三年，我在电影宣发公司做策划和剪辑：看侧拍、写脚本、剪短视频，也跑路演、对接剧组。观影 800+，最擅长的是从一堆素材里找出能打动人的那一段。<br><br>
+          离开电影行业后，我开始和 AI 一起写代码。我不是科班程序员，但我很清楚自己想要什么样的产品，于是把它一点点做了出来。
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Now Building</h2>
+        <div class="card">
+          <h3>Silberth</h3>
+          <div class="meta">原生 Android 应用 · 个人项目 · 开发中</div>
+          一款情感陪伴类的原生 Android 应用。我负责产品和设计，和 AI 一起把它写出来。
+        </div>
+        <div class="showcase">
+          <div class="sc-top"><span>SILBERTH</span><span>/ ANDROID</span></div>
+          <div class="phones">
+            <div class="phone"><img src="./assets/shots/day_splash.jpg" alt="Silberth 启动页（白天）" loading="lazy"></div>
+            <div class="phone"><img src="./assets/shots/day_alpha.jpg?v=2" alt="Silberth 聊天界面（白天）" loading="lazy"></div>
+            <div class="phone"><img src="./assets/shots/dark_chatlist.jpg" alt="Silberth 聊天列表（黑夜）" loading="lazy"></div>
+            <div class="phone"><img src="./assets/shots/dark_music.jpg" alt="Silberth 音乐页（黑夜）" loading="lazy"></div>
+          </div>
+          <div class="sc-bottom"><span class="sc-logo">Silberth</span><span class="sc-side">DAY · NIGHT</span></div>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Before</h2>
+        <div class="card">
+          <h3>电影宣发 · 策划剪辑</h3>
+          <div class="meta">北京联瑞影业 2023–2025 · 北京步履不停文化 2022–2023</div>
+          <ul>
+            <li>为院线电影策划并剪辑宣传短视频，最高点赞 60 万，均赞 3–5 万</li>
+            <li>负责 S+ 到 B 级电影路演流程，A 到 C 级项目的团队对接</li>
+            <li>剧本质检：打分、评价、写修改建议</li>
+          </ul>
+          <div class="posters">
+            <figure><img src="./assets/posters/jiulong.jpg" alt="《九龙城寨之围城》海报" loading="lazy"><figcaption>九龙城寨之围城</figcaption></figure>
+            <figure><img src="./assets/posters/shenhai.jpg" alt="《深海》海报" loading="lazy"><figcaption>深海</figcaption></figure>
+            <figure><img src="./assets/posters/hebian.jpg" alt="《河边的错误》海报" loading="lazy"><figcaption>河边的错误</figcaption></figure>
+            <figure><img src="./assets/posters/yuhuo.jpg" alt="《浴火之路》海报" loading="lazy"><figcaption>浴火之路</figcaption></figure>
+          </div>
+          <p class="poster-note">参与宣发的部分项目。另有《震耳欲聋》《我们一起摇太阳》《星河入梦》《想见你》等。</p>
+        </div>
+      </section>
+
+      <section class="block">
+        <h2>Contact</h2>
+        <div class="card">
+          欢迎聊 AI 应用、产品，或者电影。<br>
+          邮箱：<a href="mailto:chelsy2017ss@gmail.com">chelsy2017ss@gmail.com</a>
+        </div>
+      </section>
+
+      <footer>SILICON BERTH · RAIN ON GLASS · 右上角可以调雨</footer>
+    </main>
+</body>
+</html>
